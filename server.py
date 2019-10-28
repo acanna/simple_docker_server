@@ -1,6 +1,6 @@
 import socket
 
-SERVER_ADDRESS = ("localhost", 65432)
+SERVER_ADDRESS = ("", 65432)
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.bind(SERVER_ADDRESS)
