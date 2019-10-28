@@ -1,10 +1,10 @@
-PORT = 4445
+PORT = 65432
 
-build: server.py
+build:
 	docker build . --tag simple-docker-server
 
 start: build
-	docker run -it -d --rm -p ${PORT}:${PORT} simple-docker-server ${PORT}
+	docker run -it -d --rm -p ${PORT}:${PORT} simple-docker-server
 
 stop:
 	docker ps | grep simple-docker-server | cut -f 1 -d " " | xargs docker stop

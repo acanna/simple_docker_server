@@ -8,4 +8,6 @@ RUN apt-get update \
 
 COPY server.py /usr/bin/server.py
 
+EXPOSE 65432
+
 ENTRYPOINT ["python3", "/usr/bin/server.py"]
